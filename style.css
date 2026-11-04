@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #fce4ec;         /* Rosa bem claro para o fundo da página */
-    --card-bg: #ffffff;          /* Fundo branco para os cards */
-    --primary: #ec407a;          /* Rosa vibrante para destaques e botões */
-    --primary-hover: #d81b60;    /* Rosa escuro para o hover de botões */
-    --text-color: #4a4a4a;       /* Cinza escuro para boa leitura */
-    --title-color: #880e4f;      /* Rosa escuro para títulos */
-    --shadow: 0 8px 20px rgba(236, 64, 122, 0.15); /* Sombra suave arrosada */
-    --radius: 16px;              /* Arredondamento padrão */
+    --bg-color: #fce4ec;         
+    --card-bg: #ffffff;          
+    --primary: #ec407a;          
+    --primary-hover: #d81b60;    
+    --text-color: #4a4a4a;      
+    --title-color: #880e4f;      
+    --shadow: 0 8px 20px rgba(236, 64, 122, 0.15);
+    --radius: 16px;             
 }
 
 * {
@@ -211,4 +211,150 @@ footer {
     color: var(--text-color);
     text-align: center;
     background-color: #fff0f5;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #f8bbd0;
+    box-shadow: 0 4px 10px rgba(236, 64, 122, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(236, 64, 122, 0.2);
+}
+/* CSS ESTILO DO CONTATO */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--title-color);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #f8bbd0;
+    border-radius: 12px;
+    background-color: #fffafc;
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f48fb1;
+    box-shadow: 0 0 10px rgba(244, 143, 177, 0.3);
+    background-color: #ffffff;
+}
+.contact-form button.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-start;
+    background-color: #f48fb1; 
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 0.8rem 1.8rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(244, 143, 177, 0.4);
+    transition: all 0.3s ease;
+}
+
+.contact-form button.btn:hover {
+    background-color: #ec407a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(236, 64, 122, 0.3);
+}
+/* CSS ESTILOS DO BLOG */
+   .blog-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.post-date {
+    color: #888;
+}
+
+.post-tag {
+    background-color: #f8bbd0;
+    color: var(--title-color);
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.blog-post h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.post-excerpt {
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.post-content {
+    background-color: #fffafc;
+    border-left: 4px solid var(--primary);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+
+.post-content p {
+    margin-bottom: 0.5rem;
+}
+
+.post-content p:last-child {
+    margin-bottom: 0;
+}
+
+.btn-read-more {
+    display: inline-block;
+    align-self: flex-start;
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-read-more:hover {
+    color: var(--primary-hover);
+    transform: translateX(4px);
 }
