@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contatos || Meu Portfólio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="nav-container">
+                <a href="index.html" class="logo">Meu Portfólio</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="fotos.html">Galeria</a></li>
+                    <li><a href="contato.html" class="active">Contatos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="card">
+                <h1 class="section-title">Entre em Contato 🌸</h1>
+                <p>Tens alguma dúvida, proposta de projeto ou queres apenas dizer olá? Envia uma mensagem através do formulário abaixo!</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="O teu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="O teu e-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreve a tua mensagem aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </section>
+        </main>
+
+    </body>
+</html>
